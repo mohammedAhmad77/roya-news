@@ -1,0 +1,130 @@
+
+
+/*
+* main style 
+*/
+
+:root {
+
+    /* colors  */
+    --white-color: #FFFFFF;
+    --dark-color:#333;
+    --light-dark-color:#666;
+    --primary-color:#000757;
+    --secondary-light-color: #F0F0F0;
+    --secondary-color: #e6e6e6;
+
+    
+
+    /* border */
+    --primary-border: .1rem solid var(--primary-color);
+    --secondary-border: .1rem solid var(--secondary-color);
+}
+
+
+html {
+    font-size: 62.5%;
+    box-sizing: border-box;
+    min-height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: Hacen,Arial,sans-serif;
+
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    direction: rtl;
+    background-color: var(--white-color);
+    min-height: 100%;
+    font-weight: 700;
+    font-family: Arial,sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    box-sizing: border-box;
+}
+
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+
+}
+
+
+
+a {
+    text-decoration: none;
+    color: inherit;
+    display: flex;
+}
+
+h1,h2,h3,h4,h5,h6 {
+    padding: 0;
+    margin: 0;
+    font-weight: 600;
+}
+
+h1 {
+    font-size: 5rem;
+}
+
+h2 {
+    font-size: 4rem;
+}
+
+h3 {
+    font-size:3rem;
+}
+
+h4 {
+    font-size:2.5rem;
+
+}
+
+h5 {
+    font-size:2rem;
+
+}
+
+h6 {
+    font-size:1.5rem;
+
+}
+
+
+ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+
+p {
+    font-size: 1.5rem;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    color: var(--dark-color);
+}
+
+
+button {
+    background:none;
+    border:none;
+}
+    
+
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+
+.content {
+    display: flex;
+    margin-top: 2rem;
+}
