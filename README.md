@@ -17,4 +17,5 @@ And this project Is just a prototype similar to RoyaNews Website https://royanew
 or download the ZIP file.
 
 - Open the project folder in your text editor. 
-- Open your browser and go to http://localhost:5501/index.html, or http://127.0.0.1:5501/index.html
+- Open the index.html file in your browse, 
+  or open your browser and go to http://localhost:5501/index.html, or http://127.0.0.1:5501/index.html.
