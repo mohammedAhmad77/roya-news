@@ -1,96 +1,7 @@
-// main
-
-const newestData= [
-    {
-        id:"news-01",
-        description: "تراجع معدل البطالة في أمريكا",
-        category:"رياضة",
-        publishedTime:"منذ 6 دقائق",
-    },
-    {
-        id:"news-02",
-        description: "إصابات كورونا الجديدة في أدنى مستوياتها منذ تشرين الأول",
-        category:"عربي دولي",
-        publishedTime:"منذ 10 دقائق",
-    },
-    {
-        id:"news-03",
-        description: "تعيين الملياردير مايكل بلومبورغ مجدداً مبعوثاً أممياً خاصاً للمناخ",
-        category:"عربي دولي",
-        publishedTime:"منذ 15 دقائق",
-    },
-    {
-        id:"news-04",
-        description: "أسئلة مهمة وإجابات علمية حول جرعات لقاح كورونا",
-        category:"هنا وهناك",
-        publishedTime:"منذ 21 دقائق",
-    },
-    {
-        id:"news-05",
-        description: "انفجار بابور غاز في خيمة لبيع الخضار",
-        category:"محليات",
-        publishedTime:"منذ 25 دقائق",
-    },
-    {
-        id:"news-06",
-        description: "لبنان: لجنة كورونا توصي بإعادة الفتح تدريجيا",
-        category:"عربي دولي",
-        publishedTime:"منذ 27 دقائق",
-    },
-];
-
-
-
-const mostWatchedData = [
-    {
-        id:"news-01",
-        description: "فيديو متداول لسيول في منطقة العينة بين محافظتي الكرك والطفيلة",
-        category:"محليات",
-    },
-    {
-        id:"news-02",
-        description: "إعلان نتائج التوجيهيالدورة التكميلية.. رابط",
-        category:"محليات",
-    },
-    {
-        id:"news-03",
-        description: "ما حقيقة تخبئة عجوز في الأردن على الاف الدنانير بـ قواوير زريعة؟ - صور",
-        category:"محليات",
-    },
-    {
-        id:"news-04",
-        description: "عبيدات يتحدث عن الحظر الشامل وعودة المدارس",
-        category:"محليات",
-    },
-    {
-        id:"news-05",
-        description: "السيول تجرف مركبة داخلها 3 أشخاص غرب الرويشد.. تفاصيل",
-        category:"محليات",
-    },
-    {
-        id:"news-06",
-        description: "محافظ المفرق لرؤيا: وفاة شقيق أحد المفقودين في سيول الرويشد",
-        category:"محليات",
-    },
-];
-
-const weatherNewsList = [
-    "طقس العرب: قوة الحالة الجوية غير المستقرة بدأت تبتعد عن الأردن فيديو",
-    "استمرار تأثر الأردن بحالة عدم الاستقرار الجوي وتتركز في جنوب البلاد",
-    "تجدد حالة عدم الاستقرار الليلة وأمطار رعدية تطال المناطق الجنوبية فجراً (طقس العرب)",
-]
-
-
+// variables
 const newsDescMaxLength = 50;
 let showWeatherNews = true;
 
-// document variable
-
-const panelNav = document.getElementById('panel-nav');
-const panelNavList = document.getElementById('panel-nav-list');
-const panelNewsList = document.getElementById('panel-news-list');
-const panelGroup = document.querySelector('.panel-group');
-const panelWeatherList = document.getElementById('panel-weather-list');
 
 
 
@@ -150,20 +61,21 @@ const insertPanelNewsHandler = (data) => {
     
 };
 
+// additional panel group button Handler 
 
 if(panelGroup) {
     panelGroup.addEventListener('click', (event) => {
         const additionalButton = event.target.closest('.panel-group__heading');
-
+        
         if(additionalButton) {
             showWeatherNews = !showWeatherNews;
             if(showWeatherNews) {
                 insertWeatherNewsList(weatherNewsList);
-                weatherButtonHandler(additionalButton,"./assets/icons/minus.png");
+                switchAdditionalBtnIcon(additionalButton,"./assets/icons/minus.png");
 
             } else {
-                panelWeatherList.childNodes[1].innerHTML = '';
-                weatherButtonHandler(additionalButton,"./assets/icons/plus.png");
+                panelGroup.removeChild(panelGroup.lastElementChild);
+                switchAdditionalBtnIcon(additionalButton,"./assets/icons/plus.png");
             }
         }
 
@@ -175,23 +87,21 @@ if(panelGroup) {
 // insert weather news list handler
 
 const insertWeatherNewsList = (data) => {
-    data.forEach((item) => {
-        panelWeatherList.childNodes[1].insertAdjacentHTML('beforeend', `
-           
-                <li class="panel-group__content__list-item"> 
+
+    const markup =  `
+    <div class="panel-group__content" id="panel-weather-list">
+        <ul class="panel-group__content__list">
+            ${data.map((item) => (
+                `<li class="panel-group__content__list-item">
                     <a href="/">
-                        <p>
-                            ${item}   
+                        <p> 
+                            ${item}
                         </p>
                     </a>
-                </li>
-            
-        `) 
-    });
-
-    panelWeatherList.childNodes[1].insertAdjacentHTML('beforeend', `
-           
-        <li class="panel-group__button">
+                </li>`
+            )).join('')}
+        </ul>
+        <div class="panel-group__button">
             <button>
                 <a href="/">
                     <span>
@@ -199,21 +109,17 @@ const insertWeatherNewsList = (data) => {
                     </span>
                 </a>
             </button>
-        </li>
+        </div>
+    </div>
+    `;
 
-    `) 
+    panelGroup.insertAdjacentHTML('beforeend',markup);
     
-}
+};
 
 
-const weatherButtonHandler = (button,src) => {
 
-    if(showWeatherNews) {
-        button.childNodes[3].childNodes[1].src = src;
-    } else {
-        button.childNodes[3].childNodes[1].src = src;
-    }
-}
+
 
 
 insertPanelNewsHandler(newestData);

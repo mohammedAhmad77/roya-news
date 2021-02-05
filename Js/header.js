@@ -1,57 +1,14 @@
 
-// main 
-const navbarItem = [
-    "الرئيسية",
-    "محليات",
-    "فلسطين",
-    "عربي دولي",
-    "اقتصاد",
-    "رياضة",
-    "هنا وهناك",
-    "مقالات",
-    "كتاب",
-    "وفيّات",
-    "فيديو",
-    "الطقس",
-    "كاريكاتير",
-    "الاحداث السابقة",
-];
-
-
-
-// document variable
-const navbar = document.getElementById('navbar');
-const navList = document.getElementById('nav-list');
-
-
-
-
-
 // insert the navigation's items
 
 if(navList) {
-
     navbarItem.forEach((item,index) => {
-
-        if(index === 0) {
-            navList.insertAdjacentHTML('beforeend',
-            `<li class="navbar__list-item navbar__list-item-active">
-                <a href="/">${item}</a>
-            </li>`
-        );
-        } else {
-            navList.insertAdjacentHTML('beforeend',
-                `<li class="navbar__list-item">
-                    <a href="/">${item}</a>
-                </li>`
-            );
-        }
-        
+        index === 0 
+        ?  insertNavbarItems(item,"active")
+        :  insertNavbarItems(item,null);
     })
       
 }
-
-
 
 // navigation click handler
 if(navbar) {
