@@ -12,7 +12,7 @@ And this project Is just a prototype similar to RoyaNews Website https://royanew
 - CSS
 - Javascript
 
-### how to start the project
+### How to start the project
 - Clone the repo: https://github.com/mohammedAhmad77/roya-news/,
 or download the ZIP file.
 
