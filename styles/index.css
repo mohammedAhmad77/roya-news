@@ -143,6 +143,10 @@ button:active, button:focus {
 }
 
 
+.main {
+    min-height: 1600px;
+}
+
 .content {
     display: flex;
     margin-top: 2rem;

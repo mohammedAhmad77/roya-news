@@ -22,7 +22,6 @@
     justify-content: center;
     padding: 1rem 0;
     background-color: var(--secondary-light-color);
-    transition: all .2s ease-in;
     cursor: pointer;
     position: relative;
     
@@ -165,13 +164,16 @@
 }
 
 .panel-group__content {
+    overflow: hidden;
+   
 }
 
 .panel-group__content__list {
     display: flex;
     flex-direction: column;
-
+   
 }
+
 
 
 
