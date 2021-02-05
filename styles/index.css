@@ -22,13 +22,19 @@
 }
 
 
+
+@font-face {
+    font-family: 'Hacen';
+    src: url('../assets/fonts/Hacen/Hacen.ttf');
+}
+
 html {
     font-size: 62.5%;
     box-sizing: border-box;
     min-height: 100%;
     margin: 0;
     padding: 0;
-    font-family: Hacen,Arial,sans-serif;
+    font-family: "Hacen",Arial,sans-serif;
 
 }
 
@@ -38,8 +44,8 @@ body {
     direction: rtl;
     background-color: var(--white-color);
     min-height: 100%;
-    font-weight: 700;
-    font-family: Arial,sans-serif;
+    font-weight: 400;
+    font-family: "Hacen",Arial,sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     box-sizing: border-box;
@@ -64,7 +70,7 @@ a {
 h1,h2,h3,h4,h5,h6 {
     padding: 0;
     margin: 0;
-    font-weight: 600;
+    font-weight: 400;
 }
 
 h1 {
@@ -103,8 +109,8 @@ ul {
 
 
 p {
-    font-size: 1.5rem;
-    line-height: 1.6;
+    font-size: 1.7rem;
+    line-height: 1.4;
     margin: 0;
     padding: 0;
     color: var(--dark-color);
@@ -114,8 +120,18 @@ p {
 button {
     background:none;
     border:none;
+    padding: 0;
+
+
 }
+
+button:active, button:focus {
+    border: none;
+    outline: none;
+
     
+}
+
 
 
 .container {
@@ -127,4 +143,5 @@ button {
 .content {
     display: flex;
     margin-top: 2rem;
+    margin-bottom: 2rem;
 }

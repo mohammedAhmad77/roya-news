@@ -1,7 +1,7 @@
 .panel {
     display: flex;
     flex-direction: column;
-    margin-right: 2rem;
+    margin-right: 3rem;
 }
 
 .panel__nav {
@@ -19,7 +19,7 @@
     width: 50%;
     display: flex;
     justify-content: center;
-    padding: 1.5rem 0;
+    padding: 1rem 0;
     background-color: var(--secondary-light-color);
     transition: all .2s ease-in;
     cursor: pointer;
@@ -30,7 +30,7 @@
 
 
 .panel__nav__list-item > div{
-    font-size: 1.5rem;
+    font-size: 1.7rem;
     color: var(--dark-color);
     transition: all .2s ease-in;
 }
@@ -70,7 +70,11 @@
     display: flex;
     flex-direction: column;
     background-color: var(--secondary-light-color);
-    padding: 1rem;
+    padding: .5rem 1.2rem;
+
+}
+
+.panel__news__list-item:not(:first-of-type) {
     margin-top: 1rem;
 
 }
@@ -84,11 +88,11 @@
 }
 
 .panel__news__list-item-desc > a > p{
-    
+    font-size: 1.8rem;
 }
 
 .panel__news__list-item-type {
-    margin-top: .5rem;
+
     display: flex;
 
 }
@@ -98,8 +102,8 @@
 }
 
 .panel__news__list-item-type > a > span{
-    font-size: 1.4rem;
-    color: var(--primary-color);
+    font-size: 1.6rem;
+    color: var(--light-dark-color);
     position: relative;
 }
 
@@ -127,17 +131,30 @@
 .panel-group__heading {
     display: flex;
     justify-content: space-between;
-    padding: 1rem;
+    padding: 1rem 1.2rem;
     background-color: var(--secondary-light-color);
-   
+    align-items: center;
+    border-right: .4rem solid var(--primary-color);
 }
 
+
+
+
 .panel-group__heading > h5{
-    color: var(primary-color);
+    color: var(--light-dark-color);
+    font-size: 2.2rem;
 }
 
 .panel-group__heading > button{
-    
+    width: 1.7rem;
+    height: 1.7rem;
+    cursor: pointer;
+}
+
+.panel-group__heading > button > img{ 
+    width: 100%;
+    height: 100%;
+   
 }
 
 .panel-group__content {
@@ -162,7 +179,8 @@
 }
 
 .panel-group__content__list-item > a > p {
-
+    font-size: 1.8rem;
+    line-height: 1.2;
 }
 
 
@@ -172,7 +190,7 @@
 
 .panel-group__button > button{
     width: 100%;
-    padding: 1rem;
+    padding: 1.2rem 1rem;
     border: var(--secondary-border);
     display: flex;
     justify-content: center;
@@ -184,5 +202,5 @@
 
 .panel-group__button > button > a > span{
     color: var(--primary-color);
-    font-size: 1.75rem;
+    font-size: 1.6rem;
 }
