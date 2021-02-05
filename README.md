@@ -4,7 +4,7 @@
 ### Interoduction
 A Jordanian news site affiliated with the Roya TV channel, which brings the local Jordanian news, Palestinian news, and the most prominent Arab and international news.
 
-And this project Is just a prototype similar to RoyaNews
+And this project Is just a prototype similar to RoyaNews Website https://royanews.tv/.
 
 ### Technologies
 
