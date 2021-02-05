@@ -19,6 +19,7 @@
     /* border */
     --primary-border: .1rem solid var(--primary-color);
     --secondary-border: .1rem solid var(--secondary-color);
+    --additional-btn-border: .4rem solid var(--primary-color);
 }
 
 
@@ -135,8 +136,10 @@ button:active, button:focus {
 
 
 .container {
-    max-width: 1200px;
-    margin: 0 auto;
+    padding-right: 1.5rem;
+    padding-left: 1.5rem;
+    margin-right: auto;
+    margin-left: auto;
 }
 
 
@@ -144,4 +147,5 @@ button:active, button:focus {
     display: flex;
     margin-top: 2rem;
     margin-bottom: 2rem;
+    justify-content: space-between;
 }

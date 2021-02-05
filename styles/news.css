@@ -1,5 +1,5 @@
 .news {
-    width: 75rem;
+    width: 65%;
 }
 
 .news__main-news {
@@ -120,5 +120,38 @@
 .news__list__wrapper-item-status > span:last-of-type{
     margin-right: .8rem;
     color: var(--light-dark-color);
+
+}
+
+.news__group{
+    margin-top: 1rem;
+}
+
+.news__group__heading {
+    display: flex;
+    background-color: var(--secondary-light-color);
+    align-items: center;
+    justify-content: space-between;
+    padding: .8rem 1.2rem;
+    border-right: var(--additional-btn-border);
+    cursor: pointer;
+}
+
+.news__group__heading > h4{
+    font-size: 2.2ren;
+    color: var(--light-dark-color);
+}
+
+.news__group__heading > button{
+    width: 1.7rem;
+    height: 1.7rem;
+}
+
+.news__group__heading > button > img{
+    width: 100%;
+    height: 100%;
+}
+
+.news__group__list {
 
 }
