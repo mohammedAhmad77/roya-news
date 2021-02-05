@@ -6,7 +6,7 @@ header {
 
 .header__logo {
     display: flex;
-    margin: 1rem auto;
+    padding: 1rem 0;
     width: 100%;
 }
 
@@ -16,7 +16,8 @@ header {
 }
 
 .header__logo img{
-
+    width: 7.7rem;
+    height: 7.9rem;
 }
 
 .header__logo h2{
@@ -32,11 +33,13 @@ header {
     border-top: var(--secondary-border);
     border-bottom: var(--secondary-border);
 
+
 }
 
 .navbar__list {
     display: flex;
     height: 4.8rem;
+   
 }
 
 
@@ -46,6 +49,8 @@ header {
     cursor: pointer;
     
 }
+
+
 
 .navbar__list-item > a  {
     padding: 0 1.2rem;
