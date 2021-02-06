@@ -18,4 +18,4 @@ or download the ZIP file.
 
 - Open the project folder in your text editor. 
 - Open the index.html file in your browse, 
-  or open your browser and go to http://localhost:5501/index.html, or http://127.0.0.1:5501/index.html.
+  or open the index.html file with Live server.
