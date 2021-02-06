@@ -1,5 +1,5 @@
 // variables
-const newsDescMaxLength = 50;
+const newsDescMaxLength = 45;
 let showWeatherNews = true;
 
 
