@@ -48,14 +48,6 @@
         overflow-x: scroll;
     }
 
-    /* .header__navbar::-webkit-scrollbar {
-        width: 0px;  
-        background: transparent;  
-    }
-    
-    .header__navbar::-webkit-scrollbar-thumb {
-        background: var(--white-color);
-    } */
     .navbar__list {
         display: -webkit-inline-box;
     }
@@ -96,6 +88,12 @@
     }
     .news__main-news__box-desc > h3 {
         font-size: 2.5rem;
+    }
+
+    .news__group__heading > button{
+        width: 2rem;
+        height: 2rem;
+
     }
 }
 

@@ -145,6 +145,9 @@
 .news__group__heading > button{
     width: 1.7rem;
     height: 1.7rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .news__group__heading > button > img{
